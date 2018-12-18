@@ -1,2 +1,2 @@
-# ZeldaLike_PlayerMovement
-ZeldaLike repo for player movement
+# ZeldaLike_Movement
+ZeldaLike repo for movement
