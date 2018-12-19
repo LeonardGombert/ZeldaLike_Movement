@@ -330,6 +330,7 @@ MonoBehaviour:
   - name: Wall
     tileVisualPrefab: {fileID: 1866242324141918, guid: 64f4b6a1f30303e4f8eeb481b72343f5,
       type: 2}
+  selectedUnit: {fileID: 0}
 --- !u!4 &662758903
 Transform:
   m_ObjectHideFlags: 0
@@ -354,6 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dcfdf120dfa38a4684712aea4fcbe50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tileX: 0
+  tileY: 0
 --- !u!65 &662758905
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -432,7 +435,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 922872444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.75}
+  m_LocalPosition: {x: 0, y: -1.02, z: -0.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 420175612}
@@ -575,7 +578,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1028680735}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -1.47, y: -1.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
