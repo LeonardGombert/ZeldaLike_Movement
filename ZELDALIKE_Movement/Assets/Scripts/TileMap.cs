@@ -8,6 +8,7 @@ public class TileMap : MonoBehaviour {
     public GameObject selectedUnit;
 
     int [,] tiles;
+    Node[,] graph;
 
     int mapSizeX = 10;
     int mapSizeY = 10;
@@ -16,6 +17,7 @@ public class TileMap : MonoBehaviour {
     void Start()
     {
         GenerateMapData();
+        GeneratePathFindingGraph();
         GenerateMapVisual();
     }
 
@@ -60,13 +62,65 @@ public class TileMap : MonoBehaviour {
                 ClickableTile ct = gameObject.GetComponent<ClickableTile>(); 
                 ct.tileX = x;
                 ct.tileY = y;
+                ct.map = this;
             }
         }
     }
 
+    class Node
+    {
+        public List<Node> neighbors;
+
+        public Node()
+        {
+            neighbors = new List<Node>();
+        }
+    }
+
+    void GeneratePathFindingGraph()
+    {
+        graph = new Node[mapSizeX, mapSizeY];
+
+        for (int x = 0; x < mapSizeX; x++)
+        {
+            for (int y = 0; y < mapSizeY; y++)
+            {
+                //We have a four-way movement system
+
+                if (x > 0)
+                {
+                    graph[x, y].neighbors.Add(graph[x - 1, y]);
+                }
+
+                if (x < mapSizeX-1)
+                {
+                    graph[x, y].neighbors.Add(graph[x + 1, y]);
+                }
+
+                if (y > 0)
+                {
+                    graph[x, y].neighbors.Add(graph[x, y-1]);
+                }
+
+                if (y < mapSizeY-1)
+                {
+                    graph[x, y].neighbors.Add(graph[x , y+1]);
+                }
+            }
+        }
+    }
+
+
+    public Vector3 TileCoordtoWorldWoord(int x, int y)
+    {
+        return new Vector3(x, y, 0);
+    }
+
     public void MoveSelectedUnitTo (int x, int y)
     {
-
+        selectedUnit.GetComponent<Unit>().tileX = x;
+        selectedUnit.GetComponent<Unit>().tileY = y;
+        selectedUnit.transform.position = TileCoordtoWorldWoord(x, y);
     }
 
     // Update is called once per frame
