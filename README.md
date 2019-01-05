@@ -1,5 +1,5 @@
-# ZeldaLike_Movement
-ZeldaLike repo for movement
+# ZeldaLike
+ZeldaLike repo
 
 
 
