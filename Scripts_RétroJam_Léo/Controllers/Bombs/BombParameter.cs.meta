@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 958517f5d4c124d4d8bf52bec22b72c9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - basicExplosionEffect: {fileID: 4492026598997121162, guid: 92a67a2242b9ba2488214b886d5a5516,
+      type: 3}
+  - lineExplosionLane: {fileID: 7053276140329167116, guid: b07b8bf83edd4994097d66174a516c90,
+      type: 3}
+  - lineExplosionExtremity: {fileID: 7402738814901008756, guid: bc74795d4dea5dd48b135bf6187974df,
+      type: 3}
+  - lineExplosionCenter: {fileID: 1789546940002481182, guid: 1edb452676e04b248a493620dda1ee50,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
